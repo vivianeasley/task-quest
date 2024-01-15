@@ -1,0 +1,309 @@
+
+
+body {
+  font-family: 'Press Start 2P', system-ui;
+  /* background-color: #2d3a80; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#app {
+  width: 100%;
+}
+
+.spacer {
+  height: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-wrapper {
+  height: 100vh;
+}
+
+.avatars {
+  border: 4px solid white;
+  width: 120px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.avatars.selected {
+  border: 4px solid blue;
+}
+
+.dialog-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.stats-wrapper {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 600px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  gap: 4px;
+}
+
+button.is-small {
+  padding: 0;
+}
+
+.button-text {
+  display: none;
+}
+.button-icon {
+  display: block;
+  max-width: 25px;
+  margin: 0 10px;
+}
+
+main {
+  margin: 10px auto 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+#quest-form,
+#reward-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quest-selects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.quest-selects > div {
+  width: 50%;
+}
+
+.quest-submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quest-details {
+  border-bottom: 4px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;
+  padding: 0 8px 4px 8px;
+  margin-bottom: 8px;
+}
+
+.quest-details:last-child { border-bottom: none; }
+
+.details-content {
+  margin-left: 25px;
+}
+
+.reward {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #d9d9d9;
+}
+
+.reward:last-child { border-bottom: none; }
+
+.reward > .name-reward {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%
+}
+
+
+.reward > .remove-reward {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.character-stats-wrapper,
+.mechant-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.character-stats-wrapper > img {
+  width: 35%;
+  border: 4px solid white;
+}
+
+.character-stats-wrapper > div {
+  width: 65%;
+}
+
+.mechant-wrapper > img {
+  width: 35%;
+  border: 4px solid black;
+}
+
+.mechant-wrapper > div {
+  width: 65%;
+}
+
+.hp-progress {
+  border: 4px solid white;
+  height: 20px;
+}
+
+.ring-image-wrapper {
+  width: 80px;
+  background-color: #ffffff4f;
+  border: 4px solid white;
+}
+
+.ring-content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.shop-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ring-buy-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px
+}
+
+@media (min-width: 600px) {
+  .button-text {
+    display: inline-block;
+  }
+  .button-icon {
+    display: none;
+  }
+}
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
