@@ -24,13 +24,13 @@ function generateNewRings () {
 }
 
 const DEFAULT_STORE = {
-    image: "5.jpg",
-    name: "Viv",
+    image: undefined,
+    name: undefined,
     lvlXp: 0,
     hp: 10,
     maxHp: 10,
     xp: 0,
-    gold: 500,
+    gold: 0,
     xpBonus: 0,
     goldBonus: 0,
     currentView: "quests",
@@ -68,11 +68,7 @@ const DEFAULT_STORE = {
           name: "Get yourself something you've been meaning to get yourself.",
         },
     ],
-    activeQuests: [
-        {"id":2,"name":"Clean Dishes","difficulty":"1","importance":"1","reoccurs":false,"dueDateDays":"1","created":1704666895899},
-        {"id":3,"name":"Feed Cat","difficulty":"4","importance":"4","reoccurs":false,"dueDateDays":"31","created":1704666895899},
-        {"id":4,"name":"Get exercise","difficulty":"3","importance":"4","reoccurs":true,"dueDateDays":"1","created":1704666895899},
-    ],
+    activeQuests: [],
     completedQuests: [],
     failedQuests: [],
     wontDoQuests: [],
@@ -98,10 +94,7 @@ const DEFAULT_STORE = {
 
       }, 
     },
-    inventory: [{id: 1, "name":"The superior flock of lava","effects":["addOneToMaxHealth"],"colors":["#5ef776","#cdbbad"],"isThumb":false,"rarity":"common"},
-    {id: 2,"name":"Croend the Mäjesty","effects":["addTwoToMaxHealth"],"colors":["#75fa3e","#4f8aec"],"isThumb":false,"rarity":"common"},
-    {id: 3,"name":"Queld the Transposer","effects":["addThreeToMaxHealth"],"colors":["#2b75c8","#500efa"],"isThumb":false,"rarity":"uncommon"},
-    {id: 4,"name":"The crier musket of lava","effects":["addThreeToExperienceWhenGained"],"colors":["#396b2c","#6f02df"],"isThumb":false,"rarity":"rare"}],
+    inventory: [],
     ringsInShop: generateNewRings()
   };
 
